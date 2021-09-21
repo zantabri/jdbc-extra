@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'com.deepbluec.vertx'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.vertx:vertx-core:3.8.2'
+    implementation 'io.vertx:vertx-rx-java2:3.8.2'
+    implementation 'io.vertx:vertx-rx-java2-gen:3.8.2'
+    implementation 'io.vertx:vertx-jdbc-client:3.8.2'
+    implementation 'ca.krasnay:sqlbuilder:1.2'
+    implementation 'org.apache.commons:commons-lang3:3.8.1'
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
+    testImplementation 'io.vertx:vertx-junit5:3.8.2'
+    testImplementation 'org.hsqldb:hsqldb:2.3.4'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
